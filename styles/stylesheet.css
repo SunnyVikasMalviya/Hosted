@@ -1,8 +1,7 @@
-h1 {
+h6 {
     color: brown;
     background-color: antiquewhite;
 }
-h2 {
-    color: orange;
-    background-color: chartreuse;
+.FormBox {
+    border:solid grey 2px;
 }
