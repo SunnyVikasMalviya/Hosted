@@ -2,20 +2,26 @@
 <html lang="en-US">
     <head>
         <title>Hello Website World</title>
-        <link rel="stylesheet" href="..\styles\stylesheet.css">
+        <link rel="stylesheet" href="styles\stylesheet.css">
     </head>
-    <body>
-        <div>
+    <body style="margin:0px">
+        <div style="display: flex">
             <div class="FormBox">
-                <h4>New User Registration</h4>
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">                
+                <form action="views\emailVerificationPage.html" method="get">
+                    <h4>New User Registration</h4>
+                    <input name="Email" type="email" placeholder="Email"><br>
+                    <input name="Username" type="text" placeholder="Username"><br>
+                    <input name="Password" type="password" placeholder="Password"><br>
+                    <input name="Register" type="submit" placeholder="Register"><br>             
+                </form>
             </div>
             <div class="FormBox">
-                <h4>Existing User Login</h4>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                <form>
+                    <h4>Existing User Login</h4>
+                    <input name="Username" type="text" placeholder="Username"><br>
+                    <input name="Password" type="password" placeholder="Password"><br>
+                    <input name="Login" type="submit" placeholder="Login"><br>
+                </form>
             </div>
         </div>
     </body>

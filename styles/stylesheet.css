@@ -4,4 +4,9 @@ h6 {
 }
 .FormBox {
     border:solid grey 2px;
+    padding:10px;
+    margin: 10px;
+}
+input {
+    margin: 2px;
 }
