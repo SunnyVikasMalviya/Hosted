@@ -12,7 +12,7 @@ class userCRUD:
         self.conn, self.cursor = self.connectDB()
 
     def connectDB(self):
-        conn = sqlite3.connect("users.db")
+        conn = sqlite3.connect("hosted.db")
         cursor = conn.cursor()
         if cursor.execute("SELECT name from sqlite_master WHERE name='users'").fetchone() == None:
             cursor.execute("CREATE TABLE users(username TEXT, email TEXT, password BLOB)")
