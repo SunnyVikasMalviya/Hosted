@@ -26,11 +26,27 @@
         </div>
 
         <script>
+            // Handling New User Registration
             document.getElementById('NewUserRegistrationForm').addEventListener('submit',
             async function(event) {
-                    event.preventDefualt();
+                    event.preventDefault();
                     const formData = new FormData(this);
-                    const response = await fetch('', {
+                    const response = await fetch('/new_user_registration', {
+                            method: 'POST',
+                            body: formData
+                        }
+                    );
+                    const data = await response.json();
+                    alert(data.message);
+                }
+            );
+
+            // Handling Existing User Login
+            document.getElementById('ExistingUserLoginForm').addEventListner('submit',
+                async function(event) {
+                    event.preventDefault();
+                    const formData = new FormData(this);
+                    const response = await fetch('/existing_user_login', {
                             method: 'POST',
                             body: formData
                         }
